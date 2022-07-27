@@ -141,7 +141,7 @@ export const ProjectProvider = ({ children }) => {
         }
     };
 
-    const clear = () => {
+    const clearProject = () => {
         setProject(null);
         setProjects([]);
         setTasks([]);
@@ -170,7 +170,7 @@ export const ProjectProvider = ({ children }) => {
                 createProject,
                 updateProject,
                 deleteProject,
-                clear,
+                clearProject,
             }}
         >
             {children}
