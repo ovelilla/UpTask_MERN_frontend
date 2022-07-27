@@ -13,12 +13,10 @@ import useTask from "@hooks/useTask";
 
 const Menu = () => {
     const { setModal, setDialog } = useUI();
-    const { setTask, menu, setMenu, deleteTask } = useTask();
+    const { menu, setMenu, deleteTask } = useTask();
 
     const handleClose = (e) => {
         e.preventDefault();
-
-        setTask(null);
 
         setMenu({ ...menu, open: false });
     };

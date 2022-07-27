@@ -124,6 +124,10 @@ export const TaskProvider = ({ children }) => {
         }
     };
 
+    const clearTask = () => {
+        setTask(null);
+    };
+
     return (
         <TaskContext.Provider
             value={{
@@ -139,6 +143,7 @@ export const TaskProvider = ({ children }) => {
                 updateTask,
                 deleteTask,
                 changeStatus,
+                clearTask,
             }}
         >
             {children}

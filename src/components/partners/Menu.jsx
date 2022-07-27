@@ -10,12 +10,10 @@ import usePartner from "@hooks/usePartner";
 
 const Menu = () => {
     const { setDialog } = useUI();
-    const { setPartner, menu, setMenu, deletePartner } = usePartner();
+    const { menu, setMenu, deletePartner } = usePartner();
 
     const handleClose = (e) => {
         e.preventDefault();
-        
-        setPartner(null);
 
         setMenu({ ...menu, open: false });
     };

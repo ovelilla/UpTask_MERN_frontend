@@ -23,6 +23,8 @@ import Logout from "@mui/icons-material/Logout";
 
 import useAuth from "@hooks/useAuth";
 import useProject from "@hooks/useProject";
+import useTask from "@hooks/useTask";
+import usePartner from "@hooks/usePartner";
 
 import SearchResult from "@components/ui/SearchResult";
 
@@ -81,7 +83,9 @@ const Header = ({ openDrawer, setOpenDrawer }) => {
     const [openSearchResult, setOpenSearchResult] = useState(false);
 
     const { logout } = useAuth();
-    const { projects, clear } = useProject();
+    const { projects, clearProject } = useProject();
+    const { clearTask } = useTask();
+    const { clearPartner } = usePartner();
 
     const handleMenu = (e) => {
         setAnchorEl(e.currentTarget);
@@ -259,7 +263,9 @@ const Header = ({ openDrawer, setOpenDrawer }) => {
                     <MenuItem
                         onClick={() => {
                             logout();
-                            clear();
+                            clearProject();
+                            clearTask();
+                            clearPartner();
                         }}
                     >
                         <ListItemIcon>
