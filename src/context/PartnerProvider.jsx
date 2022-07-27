@@ -49,6 +49,10 @@ export const PartnerProvider = ({ children }) => {
         }
     };
 
+    const clearPartner = () => {
+        setPartner(null);
+    };
+
     return (
         <PartnerContext.Provider
             value={{
@@ -62,6 +66,7 @@ export const PartnerProvider = ({ children }) => {
                 setErrors,
                 createPartner,
                 deletePartner,
+                clearPartner,
             }}
         >
             {children}
