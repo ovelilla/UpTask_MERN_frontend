@@ -12,12 +12,10 @@ import useProject from "@hooks/useProject";
 
 const Menu = () => {
     const { setModal, setDialog } = useUI();
-    const { setProject, menu, setMenu, deleteProject } = useProject();
+    const { menu, setMenu, deleteProject } = useProject();
 
     const handleClose = (e) => {
         e.preventDefault();
-
-        setProject(null);
 
         setMenu({ ...menu, open: false });
     };
