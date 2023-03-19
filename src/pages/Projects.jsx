@@ -102,9 +102,7 @@ const Projects = () => {
             </Box>
 
             <Modal modal={modal} setModal={setModal} />
-
             <Menu />
-
             <Dialog dialog={dialog} setDialog={setDialog} />
         </>
     );
